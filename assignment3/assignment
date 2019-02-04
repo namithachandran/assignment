@@ -1,0 +1,35 @@
+1.Ruby blocks
+
+	Ruby blocks are little anonymous functions that can be passed into methods.Blocks are enclosed in a do / end statement or between brackets {}, and they can have multiple arguments
+
+Examples: 
+
+	[1,2,3,5,6,7,8,9].each do |n|
+	  puts n*2              
+	end
+
+2.Ruby Proc
+
+	A Proc object is a block of code that has been bound to a set of local variables.Once a Proc object has been bound it can be called in different contexts and still be able to access those variables.
+Examples:
+
+      1. p = Proc.new { |x| p x*2 }
+	[1,2,3,4,5,6,7,8,9].each(&p) 
+
+      2. proc = Proc.new { puts "Rubyians" }
+         proc.call              
+
+
+3.Ruby Lambda
+
+	A lambda is a way to define a block & its parameters with some special syntax.You can save this lambda into a variable for later use.Defining a lambda not need to run the code inside it, just defining a method not need to run the method,use the call method for that.
+ 
+Examples:
+
+      1. lam = lambda { |x| p x*2 }
+	[1,2,3,4,5,6,7,8,9].each(&lam)
+
+      2. lam = lambda { puts "Rubyians" }
+         lam.call
+          
+
