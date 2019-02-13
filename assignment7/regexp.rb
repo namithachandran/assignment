@@ -7,7 +7,7 @@
 3.a = "hello123four"
   p /hello123/.match(a)
 
-4.b = "helloGoodmorning"
+4.b = "HelloGoodmorning"
   p /hello/.match(b)
 
 5.c = "namithachandrasekhar@gmail.com"
@@ -27,7 +27,7 @@
  regex = /sample/
  match = regex.match(str)
  p "First letter s at position #{match.begin(0)}"
- p "Last letter e at position #{match.end(0)}"
+ p "Last letter e at position #{match.end(0)-1}"
 
 10.n = gets.to_s
    if /^\+(?:[0-9]){12}/.match(n)
