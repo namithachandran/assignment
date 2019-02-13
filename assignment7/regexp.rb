@@ -1,7 +1,7 @@
 1.x = "12345678910"
  p /\d{3,5}/.match(x)
 
-2.y = "hellogirlhelloboy"
+2.y = "^hellogirlhelloboy"
   p /hello/.match(y)
 
 3.a = "hello123four"
@@ -11,7 +11,9 @@
   p /hello/i.match(b)
 
 5.c = "namithachandrasekhar@gmail.com"
-  p /\w{1,}@\w{1,}.[a-z]{2,3}/.match(c)
+  #p /\w{1,}@\w{1,}.[a-z]{2,3}/.match(c)
+   p /\w+@\w+.[a-z]{2,3}/.match(c)
+
 
 6.d = "123456,123"
   p /\d{6}/.match(d)
@@ -45,18 +47,10 @@
   p n
  end
 
-13.counter1 = 0 
-   if n.scan(/\n/) { |match| counter1 += 1   };end
-   p "Number of lines are #{counter1}"
+13.p "Number of lines is #{n.scan(/\n/).count}"
   
-14.iscounter = 0
-   if n.scan(/is/i) { |match| iscounter += 1 };end
-   p "Number of 'is' #{iscounter}"
+14.p "Number of 'is' are #{n.scan(/is/i).count}"
 
-   thecounter = 0 
-   if n.scan(/the/i) { |match| thecounter += 1 };end
-   p "Number of 'the' #{thecounter}"
+   p "Number of 'the' are #{n.scan(/the/i).count}"
 
-   andcounter = 0 
-   if n.scan(/and/i) { |match| andcounter += 1 };end
-   p "Number of 'and' #{andcounter}"
+   p "Number of 'and' are #{n.scan(/and/i).count}"
