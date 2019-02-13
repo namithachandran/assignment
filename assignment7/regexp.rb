@@ -8,7 +8,7 @@
   p /hello123/.match(a)
 
 4.b = "HelloGoodmorning"
-  p /hello/.match(b)
+  p /hello/i.match(b)
 
 5.c = "namithachandrasekhar@gmail.com"
   p /\w{1,}@\w{1,}.[a-z]{2,3}/.match(c)
